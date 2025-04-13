@@ -89,55 +89,55 @@ export const personalInfo = {
       title: "Agricultural Yield, Price Forecasting, and Crop Disease Detection System",
       description: "1st place hackathon project implementing SARIMAX and deep learning models (CNN-ResNet, Transformers) with FastAPI backend and React frontend.",
       tags: ["Deep Learning", "FastAPI", "React"],
-      githubLink: "https://github.com/pranavacchu",
+      githubLink: "https://github.com/pranavacchu/AgroBOT.git",
     },
     {
       title: "EmoStream: Concurrent Emoji Broadcast",
       description: "Real-time emoji aggregation system for live sporting events, processing billions of emoji reactions concurrently using Apache Kafka and Apache Spark.",
       tags: ["Kafka", "Apache Spark", "Real-time Processing"],
-      githubLink: "https://github.com/pranavacchu",
+      githubLink: "https://github.com/pranavacchu/EmoStream-Concurrent-Emoji-Broadcast.git",
     },
     {
       title: "ARVR Battleship Game Online",
       description: "Developed a 1v1 online battleship game using Three.js for 3D rendering and Firebase for real-time multiplayer backend. Deployed on Vercel.",
       tags: ["Three.js", "Firebase", "Vercel"],
-      githubLink: "https://github.com/pranavacchu",
+      githubLink: "https://github.com/pranavacchu/ARVR-project-battleship.git",
     },
     {
       title: "Sports Management System",
       description: "Professional sports management platform with React frontend and MySQL backend.",
       tags: ["React", "MySQL", "Management System"],
-      githubLink: "https://github.com/pranavacchu",
+      githubLink: "https://github.com/pranavacchu/Sports-Coaching-Management-using-React-and-MySQl.git",
     },
     {
       title: "Chat Server Using SSL",
       description: "Secure chat server implementation with SSL encryption for private communication.",
       tags: ["SSL", "Networking", "Security"],
-      githubLink: "https://github.com/pranavacchu",
+      githubLink: "https://github.com/pranavacchu/chat-server-using-SSL.git",
     },
     {
       title: "FTP-SSL Server Using C",
       description: "File Transfer Protocol server with SSL encryption for secure file transfers.",
       tags: ["C", "FTP", "SSL"],
-      githubLink: "https://github.com/pranavacchu",
+      githubLink: "https://github.com/pranavacchu/FTP-SSL-server-using-C-.git",
     },
     {
       title: "Food Recommendation Website",
       description: "Responsive MERN stack website with advanced routing and a seamless user experience.",
       tags: ["MERN Stack", "Recommendations", "Responsive Design"],
-      githubLink: "https://github.com/pranavacchu",
+      githubLink: "https://github.com/pranavacchu/food-recommendation-website.git",
     },
     {
-      title: "Lock System Using C++",
-      description: "Secure lock system with password generator for enhanced authentication.",
-      tags: ["C++", "Security", "Authentication"],
-      githubLink: "https://github.com/pranavacchu",
+      title: "Login System",
+      description: "Secure authentication system with modern security practices.",
+      tags: ["Security", "Authentication", "Web Development"],
+      githubLink: "https://github.com/pranavacchu/login-system.git",
     },
     {
-      title: "Schemes Management System Using C",
+      title: "Savings Scheme Management",
       description: "Efficient scheme recommendation system using a binary search tree for fast retrieval.",
       tags: ["C", "Data Structures", "Management System"],
-      githubLink: "https://github.com/pranavacchu",
+      githubLink: "https://github.com/pranavacchu/Savings-scheme-management.git",
     },
     {
       title: "Paper Publication",
@@ -147,45 +147,21 @@ export const personalInfo = {
   ],
   skills: [
     {
-      category: "Web Development",
-      items: ["HTML", "CSS", "JavaScript", "React", "MERN Stack"],
-    },
-    {
-      category: "Design Tools",
-      items: ["Canva", "Photoshop"],
-    },
-    {
       category: "Programming Languages",
-      items: ["C/C++", "Java", "Python", "Node.js"],
+      items: ["Python", "JavaScript", "Java", "C/C++", "SQL"]
     },
     {
-      category: "Databases",
-      items: ["SQL/MySQL"],
+      category: "Web Technologies",
+      items: ["HTML", "CSS", "React", "Node.js", "MERN Stack"]
     },
     {
-      category: "Machine Learning",
-      items: ["AI/ML", "Deep Learning", "Generative AI", "RAG", "Model Development"],
+      category: "AI & Data Science",
+      items: ["AI/ML", "RAG", "Model Development"]
     },
     {
-      category: "Operating Systems",
-      items: ["Linux", "Windows"],
-    },
-    {
-      category: "Big Data",
-      items: ["Hadoop", "Kafka", "Apache Spark"],
-    },
-    {
-      category: "Cloud",
-      items: ["AWS"],
-    },
-    {
-      category: "Networking",
-      items: ["TCP/IP", "SSL"],
-    },
-    {
-      category: "Languages",
-      items: ["English (Fluent)"],
-    },
+      category: "Tools & Platforms",
+      items: ["Photoshop", "Canva", "Linux", "AWS/Cloud"]
+    }
   ],
   achievements: [
     {

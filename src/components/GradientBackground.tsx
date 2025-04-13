@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 
 const GradientBackground = () => {
@@ -36,40 +35,23 @@ const GradientBackground = () => {
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden bg-[linear-gradient(40deg,#080F16,#0e2c3d)]">
-      <svg className="hidden">
-        <defs>
-          <filter id="blurMe">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="10"
-              result="blur"
-            />
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -8"
-              result="goo"
-            />
-            <feBlend in="SourceGraphic" in2="goo" />
-          </filter>
-        </defs>
-      </svg>
-
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.08),transparent_70%)] opacity-70" />
       <div
-        className={`gradients-container h-full w-full blur-lg ${isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(40px)]"}`}
+        className={`gradients-container h-full w-full ${isSafari ? "blur-2xl" : "blur-3xl"}`}
+        style={{ willChange: 'transform' }}
       >
-        <div className="absolute [background:radial-gradient(circle_at_center,_rgba(35,199,194,0.4)_0,_rgba(35,199,194,0)_50%)_no-repeat] [mix-blend-mode:hard-light] w-[80%] h-[80%] top-[calc(50%-40%)] left-[calc(50%-40%)] [transform-origin:center_center] animate-first opacity-100" />
-        <div className="absolute [background:radial-gradient(circle_at_center,_rgba(0,180,216,0.4)_0,_rgba(0,180,216,0)_50%)_no-repeat] [mix-blend-mode:hard-light] w-[80%] h-[80%] top-[calc(50%-40%)] left-[calc(50%-40%)] [transform-origin:calc(50%-400px)] animate-second opacity-100" />
-        <div className="absolute [background:radial-gradient(circle_at_center,_rgba(67,233,255,0.4)_0,_rgba(67,233,255,0)_50%)_no-repeat] [mix-blend-mode:hard-light] w-[80%] h-[80%] top-[calc(50%-40%)] left-[calc(50%-40%)] [transform-origin:calc(50%+400px)] animate-third opacity-100" />
-        <div className="absolute [background:radial-gradient(circle_at_center,_rgba(35,199,194,0.3)_0,_rgba(35,199,194,0)_50%)_no-repeat] [mix-blend-mode:hard-light] w-[80%] h-[80%] top-[calc(50%-40%)] left-[calc(50%-40%)] [transform-origin:calc(50%-200px)] animate-fourth opacity-70" />
-        <div className="absolute [background:radial-gradient(circle_at_center,_rgba(0,120,180,0.3)_0,_rgba(0,120,180,0)_50%)_no-repeat] [mix-blend-mode:hard-light] w-[80%] h-[80%] top-[calc(50%-40%)] left-[calc(50%-40%)] [transform-origin:calc(50%-800px)_calc(50%+800px)] animate-fifth opacity-100" />
+        <div className="absolute [background:radial-gradient(circle_at_center,_rgba(6,182,212,0.25)_0,_rgba(6,182,212,0)_70%)_no-repeat] [mix-blend-mode:plus-lighter] w-full h-full top-0 left-0 [transform-origin:center_center] animate-gradient-first" />
+        <div className="absolute [background:radial-gradient(circle_at_center,_rgba(2,132,199,0.25)_0,_rgba(2,132,199,0)_70%)_no-repeat] [mix-blend-mode:plus-lighter] w-full h-full top-0 left-0 [transform-origin:calc(50%-400px)] animate-gradient-second" />
+        <div className="absolute [background:radial-gradient(circle_at_center,_rgba(20,184,166,0.25)_0,_rgba(20,184,166,0)_70%)_no-repeat] [mix-blend-mode:plus-lighter] w-full h-full top-0 left-0 [transform-origin:calc(50%+400px)] animate-gradient-third" />
+        <div className="absolute [background:radial-gradient(circle_at_center,_rgba(14,165,233,0.25)_0,_rgba(14,165,233,0)_70%)_no-repeat] [mix-blend-mode:plus-lighter] w-full h-full top-0 left-0 [transform-origin:calc(50%-200px)] animate-gradient-fourth" />
 
         <div
           ref={interactiveRef}
           onMouseMove={handleMouseMove}
-          className="absolute [background:radial-gradient(circle_at_center,_rgba(35,199,194,0.5)_0,_rgba(35,199,194,0)_50%)_no-repeat] [mix-blend-mode:hard-light] w-full h-full -top-1/2 -left-1/2 opacity-70"
+          className="absolute [background:radial-gradient(circle_at_center,_rgba(6,182,212,0.3)_0,_rgba(6,182,212,0)_70%)_no-repeat] [mix-blend-mode:plus-lighter] w-full h-full -top-1/2 -left-1/2"
         />
       </div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.05),transparent_70%)] opacity-70" />
     </div>
   );
 };
