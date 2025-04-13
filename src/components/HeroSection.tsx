@@ -17,7 +17,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="mb-4 font-medium text-accent"
+            className="mb-4 font-medium text-cyan-400"
           >
             Hello, I'm
           </motion.div>
@@ -27,7 +27,9 @@ const HeroSection = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
           >
-            <span className="text-gradient">{personalInfo.name}</span>
+            <span className="bg-gradient-to-r from-white via-white to-cyan-300 bg-clip-text text-transparent">
+              {personalInfo.name}
+            </span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -35,23 +37,24 @@ const HeroSection = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-lg text-gray-300 mb-8 max-w-md"
           >
-            {personalInfo.summary}
+            Blending creativity with technology to build innovative web solutions. Passionate about frontend development, design, and machine learning.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex gap-4"
+            className="flex gap-5"
           >
             <a 
               href="#projects" 
-              className="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-accent text-white font-medium glow-effect transition-all hover:shadow-lg hover:shadow-primary/20"
+              className="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-cyan-500/30 hover:scale-105 transform duration-300 relative overflow-hidden border border-cyan-500/20"
             >
-              View My Work
+              <span className="relative z-10">View My Work</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-cyan-500/80 to-blue-400 opacity-0 hover:opacity-100 transition-opacity duration-300"></span>
             </a>
             <a 
               href="#contact" 
-              className="px-8 py-3 rounded-full border border-white/20 hover:border-accent/50 text-white font-medium transition-all hover:bg-white/5"
+              className="px-8 py-3 rounded-full border border-cyan-500/30 hover:border-cyan-400 text-white font-medium transition-all hover:bg-cyan-900/20 hover:scale-105 transform duration-300"
             >
               Contact Me
             </a>
@@ -65,9 +68,9 @@ const HeroSection = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           <div className="relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-30 animate-pulse-glow"></div>
-            <div className="rounded-full overflow-hidden h-72 w-72 md:h-96 md:w-96 relative border border-white/20 glow-effect bg-black/30">
-              <div className="absolute inset-0 flex items-center justify-center text-5xl font-bold text-gradient-primary">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur-2xl opacity-30 animate-pulse-glow"></div>
+            <div className="rounded-full overflow-hidden h-72 w-72 md:h-96 md:w-96 relative border border-cyan-500/20 bg-black/30 backdrop-blur-sm">
+              <div className="absolute inset-0 flex items-center justify-center text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 {personalInfo.name.split(' ')[0]}
               </div>
             </div>
@@ -82,11 +85,11 @@ const HeroSection = () => {
       >
         <a
           href="#about"
-          className="flex items-center justify-center w-10 h-10 rounded-full border border-white/20 animate-float"
+          className="flex items-center justify-center w-10 h-10 rounded-full border border-cyan-500/30 animate-float group"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
-            className="h-6 w-6 text-white"
+            className="h-6 w-6 text-cyan-400 group-hover:text-cyan-300 transition-colors"
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"

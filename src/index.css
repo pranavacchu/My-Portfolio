@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 260 50% 5%;
+    --background: 200 50% 5%;
     --foreground: 0 0% 98%;
 
-    --card: 260 50% 9%;
+    --card: 200 50% 9%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 260 50% 7%;
+    --popover: 200 50% 7%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 267 100% 75%;
+    --primary: 187 100% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 260 40% 20%;
+    --secondary: 200 40% 20%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 260 40% 12%;
+    --muted: 200 40% 12%;
     --muted-foreground: 0 0% 80%;
 
-    --accent: 280 100% 70%;
+    --accent: 187 100% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 260 40% 12%;
-    --input: 260 40% 15%;
-    --ring: 267 100% 75%;
+    --border: 200 40% 12%;
+    --input: 200 40% 15%;
+    --ring: 187 100% 45%;
     --radius: 0.75rem;
   }
 }
@@ -79,16 +79,16 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-white via-white/90 to-accent/70 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-white via-white/90 to-cyan-300 bg-clip-text text-transparent;
   }
   
   .text-gradient-primary {
-    @apply bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent;
   }
   
   .hero-pattern {
-    background: linear-gradient(to bottom, rgba(15, 8, 23, 0.9), rgba(15, 8, 23, 1)),
-      url('/lovable-uploads/8641f1a0-0dd8-4937-b4c6-a029f085b159.png');
+    background: linear-gradient(to bottom, rgba(8, 15, 22, 0.9), rgba(8, 15, 22, 1)),
+      url('/lovable-uploads/516bfe45-fbb1-4695-a85e-145d023377f2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -108,5 +108,20 @@
   
   .animate-delay-800 {
     animation-delay: 800ms;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.3;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.6;
+      filter: brightness(1.5);
+    }
   }
 }

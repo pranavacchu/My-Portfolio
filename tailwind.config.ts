@@ -62,7 +62,19 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))"
-        }
+        },
+        cyan: {
+          50: '#ecfeff',
+          100: '#cffafe',
+          200: '#a5f3fc',
+          300: '#67e8f9',
+          400: '#22d3ee',
+          500: '#23C7C2',
+          600: '#0891b2',
+          700: '#0e7490',
+          800: '#155e75',
+          900: '#164e63',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,12 +92,12 @@ export default {
         },
         "pulse-glow": {
           "0%, 100%": { 
-            opacity: "1",
+            opacity: "0.3",
             filter: "brightness(1)"
           },
           "50%": { 
-            opacity: "0.8",
-            filter: "brightness(1.3)"
+            opacity: "0.6",
+            filter: "brightness(1.5)"
           },
         },
         "float": {
@@ -111,7 +123,7 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-pattern": "url('/lovable-uploads/8641f1a0-0dd8-4937-b4c6-a029f085b159.png')",
+        "hero-pattern": "url('/lovable-uploads/516bfe45-fbb1-4695-a85e-145d023377f2.png')",
       },
     },
   },
