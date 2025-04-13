@@ -5,7 +5,7 @@ import { personalInfo } from '../data/personalInfo';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center hero-pattern">
+    <section className="min-h-screen flex items-center justify-center relative">
       <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row gap-10 md:gap-16">
         <motion.div 
           className="flex flex-col flex-1 justify-center"

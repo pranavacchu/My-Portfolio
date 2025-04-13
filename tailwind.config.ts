@@ -112,6 +112,36 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "first": {
+          "0%": { transform: "translate(0%, 0%) scale(1)" },
+          "33%": { transform: "translate(5%, -5%) scale(1.05)" },
+          "66%": { transform: "translate(-5%, 5%) scale(0.95)" },
+          "100%": { transform: "translate(0%, 0%) scale(1)" },
+        },
+        "second": {
+          "0%": { transform: "translate(0%, 0%) scale(1)" },
+          "33%": { transform: "translate(-5%, 5%) scale(1.05)" },
+          "66%": { transform: "translate(5%, -5%) scale(0.95)" },
+          "100%": { transform: "translate(0%, 0%) scale(1)" },
+        },
+        "third": {
+          "0%": { transform: "translate(0%, 0%) scale(1)" },
+          "33%": { transform: "translate(-5%, -5%) scale(1.05)" },
+          "66%": { transform: "translate(5%, 5%) scale(0.95)" },
+          "100%": { transform: "translate(0%, 0%) scale(1)" },
+        },
+        "fourth": {
+          "0%": { transform: "translate(0%, 0%) scale(1)" },
+          "33%": { transform: "translate(5%, 5%) scale(1.05)" },
+          "66%": { transform: "translate(-5%, -5%) scale(0.95)" },
+          "100%": { transform: "translate(0%, 0%) scale(1)" },
+        },
+        "fifth": {
+          "0%": { transform: "translate(0%, 0%) scale(1)" },
+          "33%": { transform: "translate(5%, 0%) scale(1.05)" },
+          "66%": { transform: "translate(-5%, 0%) scale(0.95)" },
+          "100%": { transform: "translate(0%, 0%) scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -120,6 +150,11 @@ export default {
         "float": "float 6s ease-in-out infinite",
         "slide-up": "slide-up 0.6s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
+        "first": "first 8s ease-in-out infinite",
+        "second": "second 8s ease-in-out infinite",
+        "third": "third 8s ease-in-out infinite",
+        "fourth": "fourth 8s ease-in-out infinite",
+        "fifth": "fifth 8s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

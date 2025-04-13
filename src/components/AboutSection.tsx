@@ -67,12 +67,13 @@ const SkillIcon = ({ skill, index }: { skill: string, index: number }) => {
 
 const AboutSection = () => {
   // Flatten all skills into a single array for the skills grid
-  const allSkills = personalInfo.skills.flatMap(skillCategory => 
+  // And remove duplicates
+  const allSkills = [...new Set(personalInfo.skills.flatMap(skillCategory => 
     skillCategory.items
-  );
+  ))];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-gradient-to-b from-background to-secondary/10">
+    <section id="about" className="py-20 md:py-32 relative z-10">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <motion.h2 
