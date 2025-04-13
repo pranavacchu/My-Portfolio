@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { personalInfo } from '../data/personalInfo';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative">
       <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row gap-10 md:gap-16">
         <motion.div 
           className="flex flex-col flex-1 justify-center"
@@ -27,7 +26,7 @@ const HeroSection = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
           >
-            <span className="bg-gradient-to-r from-white via-white to-cyan-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400 via-cyan-500 to-blue-500 bg-clip-text text-transparent">
               {personalInfo.name}
             </span>
           </motion.h1>

@@ -1,4 +1,3 @@
-
 interface Education {
   institution: string;
   degree: string;
@@ -157,15 +156,15 @@ export const personalInfo = {
     },
     {
       category: "Programming Languages",
-      items: ["C++", "C", "Java", "Python", "Node.js"],
+      items: ["C/C++", "Java", "Python", "Node.js"],
     },
     {
       category: "Databases",
-      items: ["MySQL", "SQL"],
+      items: ["SQL/MySQL"],
     },
     {
       category: "Machine Learning",
-      items: ["Deep Learning", "RAG", "Generative AI", "Model Development"],
+      items: ["AI/ML", "Deep Learning", "Generative AI", "RAG", "Model Development"],
     },
     {
       category: "Operating Systems",
