@@ -1,15 +1,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { personalInfo } from '../data/personalInfo';
 
 const AboutSection = () => {
-  const skills = [
-    { name: 'React', level: 90 },
-    { name: 'TypeScript', level: 85 },
-    { name: 'UI/UX Design', level: 80 },
-    { name: 'Node.js', level: 75 },
-    { name: 'Framer Motion', level: 70 },
-  ];
+  // Take the first 5 skills categories for the skill bars
+  const topSkills = personalInfo.skills.slice(0, 5).flatMap(skillCategory => 
+    skillCategory.items.slice(0, 2).map((item, i) => ({
+      name: item,
+      level: 90 - (i * 5) // Give varying levels for visual interest
+    }))
+  ).slice(0, 5);
 
   return (
     <section id="about" className="py-20 md:py-32 bg-gradient-to-b from-background to-secondary/10">
@@ -40,14 +41,23 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="glass-card rounded-2xl p-1">
-              <div className="relative rounded-2xl overflow-hidden">
-                <div className="aspect-square bg-gradient-to-br from-secondary to-accent/20 rounded-xl flex items-center justify-center">
-                  <div className="text-5xl font-bold text-white flex items-center justify-center h-full">
-                    <span className="text-gradient">Portfolio</span>
-                  </div>
-                </div>
-              </div>
+            <div className="glass-card rounded-2xl p-6 space-y-6">
+              <h3 className="text-2xl font-bold text-white mb-4">Education</h3>
+              {personalInfo.education.map((edu, index) => (
+                <motion.div 
+                  key={index} 
+                  className="space-y-1 border-l-2 border-accent pl-4 pb-4"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.1 * index }}
+                >
+                  <h4 className="text-lg font-semibold text-white">{edu.institution}</h4>
+                  <p className="text-gray-300">{edu.degree}</p>
+                  <p className="text-accent">{edu.grade}</p>
+                  <p className="text-gray-400 text-sm">{edu.period}</p>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
           
@@ -58,22 +68,15 @@ const AboutSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col gap-6"
           >
-            <h3 className="text-2xl font-bold text-white">Front-end Developer & UI/UX Enthusiast</h3>
+            <h3 className="text-2xl font-bold text-white">Computer Science Student & Developer</h3>
             <p className="text-gray-300">
-              I'm a passionate developer with a keen eye for design and a love for creating smooth, 
-              interactive digital experiences. With several years of experience in web development, 
-              I specialize in building modern applications using React and other cutting-edge technologies.
-            </p>
-            <p className="text-gray-300">
-              My approach combines technical expertise with creative problem-solving to deliver solutions 
-              that are both functional and visually appealing. I'm constantly exploring new technologies 
-              and techniques to enhance my skills.
+              {personalInfo.summary}
             </p>
             
             <div className="mt-4">
               <h4 className="text-xl font-semibold mb-4 text-white">My Skills</h4>
               <div className="space-y-4">
-                {skills.map((skill, index) => (
+                {topSkills.map((skill, index) => (
                   <motion.div 
                     key={skill.name} 
                     className="space-y-2"
@@ -101,6 +104,60 @@ const AboutSection = () => {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-16"
+        >
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">My Experience</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {personalInfo.experience.map((exp, index) => (
+              <motion.div 
+                key={index} 
+                className="glass-card p-6 rounded-xl"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.1 * index }}
+              >
+                <h4 className="text-lg font-semibold text-white mb-2">{exp.role}</h4>
+                {exp.period && <p className="text-accent mb-4">{exp.period}</p>}
+                <ul className="list-disc list-inside space-y-2">
+                  {exp.responsibilities.map((resp, i) => (
+                    <li key={i} className="text-gray-300 text-sm">{resp}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-16"
+        >
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Achievements</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {personalInfo.achievements.map((achievement, index) => (
+              <motion.div 
+                key={index} 
+                className="bg-white/5 p-4 rounded-lg border border-white/10"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.1 * index }}
+              >
+                <p className="text-gray-300">{achievement.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
