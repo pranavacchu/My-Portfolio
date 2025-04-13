@@ -15,7 +15,7 @@ const ProjectSection = () => {
           once: true
         }} transition={{
           duration: 0.5
-        }} className="text-3xl font-bold mb-4 inline-block text-gradient-primary px-0 py-0 mx-0 md:text-3xl">
+        }} className="text-3xl mb-4 inline-block text-gradient-primary mx-0 font-bold px-0 py-[4px] md:text-4xl">
             My Projects
           </motion.h2>
           <motion.div className="h-1 w-20 bg-accent mx-auto rounded-full mb-8" initial={{
