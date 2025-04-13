@@ -1,8 +1,19 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { toast } from "sonner";
 import { personalInfo } from '../data/personalInfo';
+
+// Declare global window type
+declare global {
+  interface Window {
+    sendEmail: (formData: {
+      name: string;
+      email: string;
+      subject: string;
+      message: string;
+    }) => Promise<{ status: number }>;
+  }
+}
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +23,25 @@ const ContactSection = () => {
     message: '',
   });
 
+  useEffect(() => {
+    // Load EmailJS script
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Load our custom script
+    const customScript = document.createElement('script');
+    customScript.src = '/script.js';
+    customScript.async = true;
+    document.body.appendChild(customScript);
+
+    return () => {
+      document.body.removeChild(script);
+      document.body.removeChild(customScript);
+    };
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -20,17 +50,31 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send the form data to a server
-    console.log('Form submitted:', formData);
-    toast.success("Message sent successfully!");
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
+    
+    try {
+      if (typeof window.sendEmail === 'function') {
+        const response = await window.sendEmail(formData);
+        
+        if (response.status === 200) {
+          toast.success("Message sent successfully!");
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+          });
+        } else {
+          toast.error("Failed to send message. Please try again.");
+        }
+      } else {
+        toast.error("Email service not initialized. Please try again later.");
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error("Failed to send message. Please try again.");
+    }
   };
 
   return (

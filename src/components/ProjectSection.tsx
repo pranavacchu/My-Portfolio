@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { personalInfo } from '../data/personalInfo';
@@ -39,34 +38,46 @@ const ProjectSection = () => {
           {personalInfo.projects.map((project, index) => (
             <motion.div 
               key={index} 
-              className="glass-card rounded-xl overflow-hidden glow-effect border-glow group"
+              className="glass-card rounded-xl overflow-hidden group relative transform transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/20"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
-              <div className="h-48 bg-gradient-to-br from-cyan-600/20 to-blue-600/10 flex items-center justify-center">
-                <h3 className="text-2xl font-bold text-gradient text-center px-4">{project.title}</h3>
+              {/* Gradient Border Effect */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Project Header */}
+              <div className="relative h-48 bg-gradient-to-br from-cyan-600/20 to-blue-600/10 group-hover:from-cyan-600/30 group-hover:to-blue-600/20 transition-all duration-500 overflow-hidden">
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <h3 className="relative z-10 text-2xl font-bold text-gradient text-center px-4 h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">{project.title}</h3>
               </div>
-              <div className="p-6">
-                <p className="text-gray-300 mb-4">{project.description}</p>
+              
+              {/* Project Content */}
+              <div className="p-6 relative z-10 bg-gradient-to-b from-transparent to-black/5 group-hover:to-black/10 transition-colors duration-500">
+                <p className="text-gray-300 mb-4 transform group-hover:translate-y-[-2px] transition-transform duration-500">{project.description}</p>
+                
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, i) => (
                     <span 
                       key={i} 
-                      className="text-xs bg-white/10 text-white px-3 py-1 rounded-full transition-colors group-hover:bg-cyan-500/20"
+                      className="text-xs bg-white/10 text-white px-3 py-1 rounded-full transition-all duration-300 
+                               group-hover:bg-cyan-500/20 hover:bg-cyan-500/30 hover:scale-105 hover:shadow-lg"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
+                
+                {/* Links */}
                 <div className="mt-6 flex justify-between items-center">
                   {project.githubLink && (
                     <a 
                       href={project.githubLink} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-accent hover:text-white transition-colors"
+                      className="text-accent hover:text-white transition-all duration-300 hover:translate-x-1"
                     >
                       View on GitHub
                     </a>
@@ -77,11 +88,12 @@ const ProjectSection = () => {
                         href={project.githubLink} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="w-10 h-10 rounded-full bg-white/5 hover:bg-cyan-500/20 flex items-center justify-center transition-colors"
+                        className="w-10 h-10 rounded-full bg-white/5 hover:bg-cyan-500/20 flex items-center justify-center 
+                                 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
                       >
                         <svg 
                           xmlns="http://www.w3.org/2000/svg" 
-                          className="h-5 w-5" 
+                          className="h-5 w-5 transition-transform duration-300 group-hover:rotate-3" 
                           viewBox="0 0 24 24" 
                           fill="none" 
                           stroke="currentColor" 
@@ -105,7 +117,9 @@ const ProjectSection = () => {
             href={personalInfo.socialLinks.github} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="px-8 py-3 rounded-full border border-cyan-500/20 hover:border-cyan-400/50 text-white font-medium transition-all hover:bg-cyan-500/10 hover:shadow-lg hover:shadow-cyan-500/20"
+            className="px-8 py-3 rounded-full border border-cyan-500/20 hover:border-cyan-400/50 text-white font-medium 
+                     transition-all duration-500 hover:bg-cyan-500/10 hover:shadow-lg hover:shadow-cyan-500/20 
+                     hover:scale-105 hover:px-10"
           >
             See More on GitHub
           </a>

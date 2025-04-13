@@ -28,6 +28,33 @@ const Navbar = () => {
     }
   };
 
+  const navigationItems = [
+    { name: "Home", id: "hero" },
+    { name: "About", id: "about" },
+    { name: "Projects", id: "projects" },
+    { name: "Contact", id: "contact" },
+    { 
+      name: "Resume", 
+      href: "/RESUME Pranav Acharya.pdf",
+      icon: (
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={2} 
+            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+          />
+        </svg>
+      )
+    }
+  ];
+
   return (
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${
@@ -77,21 +104,18 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-12">
-          {[
-            { name: "Home", id: "hero" },
-            { name: "About", id: "about" },
-            { name: "Projects", id: "projects" },
-            { name: "Contact", id: "contact" }
-          ].map((item) => (
+          {navigationItems.map((item) => (
             <a
               key={item.name}
-              href={`#${item.id}`}
-              onClick={(e) => {
+              href={item.href || `#${item.id}`}
+              onClick={item.id ? (e) => {
                 e.preventDefault();
                 scrollToSection(item.id);
-              }}
-              className="relative text-white hover:text-accent transition-colors after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+              } : undefined}
+              download={item.href ? "" : undefined}
+              className="relative text-white hover:text-accent transition-colors after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left group flex items-center gap-2"
             >
+              {item.icon}
               {item.name}
             </a>
           ))}
@@ -100,28 +124,25 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <motion.div 
-            className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg glass-card mt-2 p-4 rounded-lg shadow-lg md:hidden"
+            className="absolute top-full left-0 right-0 bg-background backdrop-blur-lg glass-card mt-2 p-4 rounded-lg shadow-lg md:hidden"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
           >
             <nav className="flex flex-col space-y-4">
-              {[
-                { name: "Home", id: "hero" },
-                { name: "About", id: "about" },
-                { name: "Projects", id: "projects" },
-                { name: "Contact", id: "contact" }
-              ].map((item) => (
+              {navigationItems.map((item) => (
                 <a
                   key={item.name}
-                  href={`#${item.id}`}
-                  onClick={(e) => {
+                  href={item.href || `#${item.id}`}
+                  onClick={item.id ? (e) => {
                     e.preventDefault();
                     scrollToSection(item.id);
-                  }}
-                  className="text-white hover:text-accent p-2 transition-colors"
+                  } : undefined}
+                  download={item.href ? "" : undefined}
+                  className="text-white hover:text-accent p-2 transition-colors flex items-center gap-2"
                 >
+                  {item.icon}
                   {item.name}
                 </a>
               ))}
