@@ -21,6 +21,7 @@ const Home = () => {
 
   return (
     <motion.div
+      className="dynamic-bg"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

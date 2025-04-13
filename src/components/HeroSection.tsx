@@ -37,7 +37,7 @@ const HeroSection = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-lg text-gray-300 mb-8 max-w-md"
           >
-            Blending creativity with technology to build innovative web solutions. Passionate about frontend development, design, and machine learning.
+            I don't just code — I create. From dynamic web apps to cutting-edge AI, I build powerful tech with bold ideas. Ready to push boundaries and redefine what's possible.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -68,11 +68,13 @@ const HeroSection = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           <div className="relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur-2xl opacity-30 animate-pulse-glow"></div>
-            <div className="rounded-full overflow-hidden h-72 w-72 md:h-96 md:w-96 relative border border-cyan-500/20 bg-black/30 backdrop-blur-sm">
-              <div className="absolute inset-0 flex items-center justify-center text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                {personalInfo.name.split(' ')[0]}
-              </div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur-xl opacity-30 animate-pulse-glow"></div>
+            <div className="rounded-full overflow-hidden h-72 w-72 md:h-96 md:w-96 relative border-2 border-cyan-500/20 shadow-lg shadow-cyan-500/20">
+              <img 
+                src="/lovable-uploads/69a92b0b-721a-4ede-85ea-5fb4a4e41741.png" 
+                alt={personalInfo.name} 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </motion.div>
