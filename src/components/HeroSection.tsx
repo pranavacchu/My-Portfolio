@@ -36,7 +36,7 @@ const HeroSection = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-lg text-gray-300 mb-8 max-w-md"
           >
-            I don't just code — I create. From dynamic web apps to cutting-edge AI, I build powerful tech with bold ideas. Ready to push boundaries and redefine what's possible.
+            A caffeine-dependent life form ready to code. From dynamic web apps to cutting-edge AI, ready to push boundaries and redefine what's possible.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

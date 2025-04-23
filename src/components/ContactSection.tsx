@@ -69,11 +69,11 @@ const ContactSection = () => {
           toast.error("Failed to send message. Please try again.");
         }
       } else {
-        toast.error("Email service not initialized. Please try again later.");
+        toast.error("Email service not initialized. Please try refreshing the page and try again.");
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      toast.error("Failed to send message. Please try again.");
+      toast.error("Failed to send message. Please try refreshing the page and try again.");
     }
   };
 

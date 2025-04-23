@@ -104,22 +104,34 @@ export const personalInfo = {
       githubLink: "https://github.com/pranavacchu/ARVR-project-battleship.git",
     },
     {
+      title: "Enhanced RAG System for YouTube",
+      description: "Multimodal retrieval-augmented generation platform with dual operation modes (RAG/Agent) that dynamically extracts knowledge from YouTube videos using advanced prompting techniques.",
+      tags: ["RAG", "NLP", "Knowledge Extraction"],
+      githubLink: "https://github.com/pranavacchu/enhanced-rag-system-for-youtube.git",
+    },
+    {
+      title: "Advanced Reinforcement Learning for Ultimate Tic-Tac-Toe",
+      description: "AI-powered game featuring neural networks and PPO algorithms with three difficulty levels and responsive UI design.",
+      tags: ["Reinforcement Learning", "Neural Networks", "Game Development"],
+      githubLink: "https://github.com/pranavacchu/Advanced-Reinforcement-Learning-for-Mastering-Ultimate-Tic-Tac-Toe.git",
+    },
+    {
+      title: "Application Monitoring Dashboard",
+      description: "Comprehensive log analytics and monitoring platform using Kafka, Prometheus, Loki, and Grafana for real-time application performance insights.",
+      tags: ["Kafka", "Grafana", "Monitoring"],
+      githubLink: "https://github.com/pranavacchu/Application-Monitoring-Dashboard-using-Kafka.git",
+    },
+    {
+      title: "Course Registration System",
+      description: "Robust course registration platform using Maven and Spring Boot, implementing secure user authentication and efficient course management features.",
+      tags: ["Spring Boot", "Maven", "Web Application"],
+      githubLink: "https://github.com/pranavacchu/Course-registration-system-using-Maven-and-Spring-Boot.git",
+    },
+    {
       title: "Sports Management System",
       description: "Professional sports management platform with React frontend and MySQL backend.",
       tags: ["React", "MySQL", "Management System"],
       githubLink: "https://github.com/pranavacchu/Sports-Coaching-Management-using-React-and-MySQl.git",
-    },
-    {
-      title: "Chat Server Using SSL",
-      description: "Secure chat server implementation with SSL encryption for private communication.",
-      tags: ["SSL", "Networking", "Security"],
-      githubLink: "https://github.com/pranavacchu/chat-server-using-SSL.git",
-    },
-    {
-      title: "FTP-SSL Server Using C",
-      description: "File Transfer Protocol server with SSL encryption for secure file transfers.",
-      tags: ["C", "FTP", "SSL"],
-      githubLink: "https://github.com/pranavacchu/FTP-SSL-server-using-C-.git",
     },
     {
       title: "Food Recommendation Website",
