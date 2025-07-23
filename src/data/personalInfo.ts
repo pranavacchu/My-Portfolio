@@ -76,18 +76,29 @@ export const personalInfo = {
       ],
     },
     {
-      role: "Summer Internship at CDSAML",
-      period: "2024",
+      role: "Research Intern – CCBD, CDSAML Program",
+      company: "PES University",
+      period: "June 2024 – August 2024",
       responsibilities: [
-        "Worked on a deep learning hybrid model using GRU and CNN for predicting tags of Stack Overflow questions.",
-        "Contributing to a paper publication.",
+        "Co-authored a research paper exploring a hybrid deep learning approach combining Convolutional Neural Networks (CNN) and Gated Recurrent Units (GRU) for intelligent tag prediction on Stack Overflow questions.",
+        "Applied Natural Language Processing (NLP) techniques to preprocess and vectorize large volumes of Q&A data, enhancing model accuracy and relevance in automated tagging.",
+        "Developed and evaluated multiple model architectures for improved scalability, achieving meaningful insights into model performance for real-world content classification tasks.",
+        "Accepted and presented at the 9th International Conference on Information and Communication Technology for Intelligent Systems (ICTIS 2025), Thailand, and selected for publication under Springer.",
+        "Conducted as part of a structured 6-week research internship under the Center for Computational and Big Data (CCBD) at PES University.",
       ],
     },
     {
-      role: "Head of Design – Encode AI",
+      role: "Head of Design",
+      company: "Encode AI | PES University",
+      period: "2024-2025",
       responsibilities: [
-        "Led the design team, overseeing creation of the main event poster, club logo, and event ticket passes.",
-        "Managed recruitment and mentoring of junior designers, ensuring alignment with the club's creative vision.",
+        "Spearheaded the visual branding and creative direction for Encode AI, a student-led tech club focused on AI and innovation.",
+        "Led the end-to-end design of key brand assets, including the official club logo, main event posters, and event ticket passes, ensuring consistency across digital and print media.",
+        "Managed a team of junior designers, overseeing recruitment, onboarding, and mentorship to build a cohesive and high-performing creative team.",
+        "Defined and enforced design standards and guidelines to maintain visual coherence across all club communications and events.",
+        "Collaborated closely with the marketing and event coordination teams to align design output with promotional goals and target audience expectations.",
+        "Utilized tools such as Figma, Adobe Illustrator, and Photoshop to develop high-impact visuals, infographics, and social media content.",
+        "Played a key role in increasing event engagement and brand recognition through compelling and professional design execution.",
       ],
     },
     {
@@ -191,7 +202,7 @@ export const personalInfo = {
   ],
   achievements: [
     {
-      description: "Awarded the CNR Scholarship for all five semesters (top 20% of batch)",
+      description: "Awarded the CNR Scholarship for all six semesters (top 20% of batch)",
     },
     {
       description: "1st place at Arithemania 4.0 – PES CSE department's flagship hackathon (team of 4 among 120 teams)",
