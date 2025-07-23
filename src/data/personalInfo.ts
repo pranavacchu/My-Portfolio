@@ -44,7 +44,7 @@ export const personalInfo = {
     {
       institution: "PES University, Bengaluru",
       degree: "Bachelor of Technology in Computer Science",
-      grade: "CGPA: 8.96",
+      grade: "CGPA: 9.01",
       period: "2022 – 2026",
     },
     {
@@ -61,6 +61,20 @@ export const personalInfo = {
     },
   ],
   experience: [
+    {
+      role: "Software Development Intern",
+      company: "GoWarm",
+      period: "Present",
+      responsibilities: [
+        "Contributing to the development of a scalable SaaS platform designed to empower Go-To-Market (GTM) teams in marketing and sales.",
+        "Actively involved in implementing new features and improving existing functionalities across the full stack in an agile development environment.",
+        "Working with a modern technology stack including Python, Java (Spring Boot), React.js, and MongoDB, with deployment and infrastructure managed on Microsoft Azure.",
+        "Writing clean, maintainable, and production-ready code, with a focus on performance, scalability, and reliability.",
+        "Collaborating closely with senior engineers and cross-functional teams through regular sprint planning, code reviews, and daily stand-ups.",
+        "Gaining hands-on experience in RESTful API development, frontend component design, and backend logic implementation.",
+        "Developing a deep understanding of SaaS application architecture, CI/CD pipelines, and cloud-based deployment workflows.",
+      ],
+    },
     {
       role: "Summer Internship at CDSAML",
       period: "2024",
